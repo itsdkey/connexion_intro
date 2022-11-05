@@ -1,0 +1,22 @@
+type: object
+required:
+  - title
+  - content
+  - category
+properties:
+  title:
+    type: string
+    maxLength: 120
+  content:
+    type: string
+  author:
+    type: string
+    nullable: true
+  category:
+    type: string
+    nullable: true
+    enum: [
+      "MUSIC",
+      "IT",
+      "POLITICS",
+    ]

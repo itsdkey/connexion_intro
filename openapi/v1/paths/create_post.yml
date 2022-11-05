@@ -1,0 +1,22 @@
+post:
+  summary: Create a single Post
+  requestBody:
+    description: POST data to create a Post
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../v1.yml#/components/schemas/Post"
+  responses:
+    "201":
+      description: A Post was created successfully
+      content:
+        application/json:
+          schema:
+            $ref: "../../v1.yml#/components/schemas/Post"
+    "400":
+      description: The service could not understand the request
+      content:
+        application/json:
+          schema:
+            $ref: "../../v1.yml#/components/schemas/Error"

@@ -1,0 +1,19 @@
+openapi: "3.0.3"
+info:
+  title: Connexion Intro
+  version: 1.0.1
+servers:
+  - url: http://0.0.0.0:8080/api/v1.0
+paths:
+  /create-post:
+    $ref: "./v1/paths/create_post.yml"
+  /health-check:
+    $ref: "./v1/paths/health_check.yml"
+
+
+components:
+  schemas:
+    Error:
+      $ref: "./v1/schemas/error.yml"
+    Post:
+      $ref: "./v1/schemas/post.yml"
